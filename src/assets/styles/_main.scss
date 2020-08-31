@@ -1,0 +1,33 @@
+/* Modules */
+@import './variables';
+@import './general';
+
+/* Components */
+@import './components/header';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    color: #FFF;
+}
+
+#app {
+    min-height: 100%;
+    background-color: $light-blue1;
+}
+
+.view {
+    padding: 1rem 2rem;
+    height: auto;
+}

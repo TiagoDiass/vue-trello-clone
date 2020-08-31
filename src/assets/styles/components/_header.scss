@@ -1,0 +1,43 @@
+header.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    background-color: $dark-blue2;
+
+    h2.logo {
+        font-weight: 600;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+
+        a {
+            font-weight: 600;
+            background: white;
+            color: $light-blue1;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: box-shadow 0.2s;
+            outline: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+
+            i {
+                margin-left: 4px;
+            }
+
+            &:first-of-type {
+                margin-right: 16px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 16px rgba($color: #FFF, $alpha: 0.3);
+            }
+        }
+    }
+}
