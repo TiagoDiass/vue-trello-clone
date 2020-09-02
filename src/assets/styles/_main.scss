@@ -3,10 +3,15 @@
 @import './general';
 
 /* Components */
+@import './components/animations';
 @import './components/header';
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
+
+/* Pages */
+@import './pages/home';
+@import './pages/board';
 
 * {
     padding: 0;

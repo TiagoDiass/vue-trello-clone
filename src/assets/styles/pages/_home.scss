@@ -1,0 +1,14 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul.tips {
+        padding: 1rem 1.6rem;
+
+        li {
+            font-size: 1.16rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+}

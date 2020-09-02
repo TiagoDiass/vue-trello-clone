@@ -1,13 +1,13 @@
 <template>
   <header class="header">
-    <h2 class="logo">
+    <h2 class="logo" @click="$router.push('/')">
       <span class="text-orange">Vue</span><span class="font-weight-light">Trello</span>
     </h2>
 
     <nav>
-      <router-link tag="a" to="/boards">
+      <router-link tag="a" to="/board">
         <i class="fas fa-clipboard-list"></i>
-        Seus Quadros
+        Seu Quadro
       </router-link>
 
       <a href="#">
