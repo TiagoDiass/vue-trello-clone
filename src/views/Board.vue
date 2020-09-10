@@ -3,7 +3,30 @@
     <h1 class="display-3 text-uppercase text-center">Seu Quadro</h1>
 
     <main>
-      <div class="board">
+      <!-- Código com v-for pra facilitar -->
+      <div class="board" v-for="(board, index) in boards" :key="index">
+        <h3 class="board-title">{{ board.title }}</h3>
+
+        <Container
+          group-name="trello"
+          class="drag-container"
+          @drag-start="handleDragStart(board.name, $event)"
+          @drop="handleDrop(board.name, $event)"
+          :get-child-payload="getChildPayload"
+          :drop-placeholder="{ className: 'drop-placeholder' }"
+          drag-class="task-ghost"
+          drop-class="task-ghost-drop"
+        >
+          <Draggable v-for="(task, index) in board.tasks" :key="index">
+            <div class="task">
+              <h3>{{ task.text }}</h3>
+            </div>
+          </Draggable>
+        </Container>
+      </div>
+
+      <!-- Código manual pra cada lane -->
+      <!-- <div class="board">
         <h3 class="board-title">A fazer</h3>
         <Container
           group-name="trello"
@@ -61,7 +84,7 @@
             </div>
           </Draggable>
         </Container>
-      </div>
+      </div> -->
     </main>
   </div>
 </template>
@@ -76,30 +99,41 @@ export default {
   },
 
   data: () => ({
-    tasks: {
-      todo: [
-        {
-          text: 'Fazer café',
-        },
-        {
-          text: 'Mexer no facebook',
-        },
-      ],
+    boards: {
+      todo: {
+        name: 'todo',
+        title: 'A fazer',
+        tasks: [
+          {
+            text: 'Fazer café',
+          },
+          {
+            text: 'Mexer no facebook',
+          },
+        ],
+      },
 
-      doing: [
-        {
-          text: 'Comendo',
-        },
-        {
-          text: 'COdando',
-        },
-      ],
+      doing: {
+        name: 'doing',
+        title: 'Fazendo',
+        tasks: [
+          {
+            text: 'Fazer bolo',
+          },
+          {
+            text: 'Ir no shopping',
+          },
+          {
+            text: 'Lição de casa',
+          },
+        ],
+      },
 
-      done: [
-        {
-          text: 'ir pro cinema',
-        },
-      ],
+      done: {
+        name: 'done',
+        title: 'Feito',
+        tasks: [],
+      },
     },
 
     draggingTask: {
@@ -115,7 +149,7 @@ export default {
       if (isSource) {
         this.draggingTask = {
           index: payload.index,
-          taskData: { ...this.tasks[lane][payload.index] },
+          taskData: { ...this.boards[lane].tasks[payload.index] },
         };
       }
     },
@@ -128,11 +162,11 @@ export default {
       }
 
       if (removedIndex !== null) {
-        this.tasks[lane].splice(removedIndex, 1);
+        this.boards[lane].tasks.splice(removedIndex, 1);
       }
 
       if (addedIndex !== null) {
-        this.tasks[lane].splice(addedIndex, 0, this.draggingTask.taskData);
+        this.boards[lane].tasks.splice(addedIndex, 0, this.draggingTask.taskData);
       }
     },
 
