@@ -6,35 +6,34 @@
       feito com Vue.js
     </h1>
 
-    <h3 class="display-4 mb-1">Abaixo segue algumas dicas para você utilizar a aplicação</h3>
-
     <ul class="tips">
       <li>
-        Vá para os
-        <span class="text-orange cursor-pointer" @click="navigateTo('Boards')">"Seus Quadros"</span>
-        para visualizá-los e começar a gerenciar suas tarefas
+        Vá para o
+        <span class="text-orange cursor-pointer" @click="navigateTo('Boards')">"Seu Quadro"</span>
+        para visualizá-lo e começar a gerenciar suas tarefas
       </li>
       <li>
-        Nos seus quadros, você pode criar vários cartões que podem simbolizar diversos tipos de
+        No seus quadro, você pode criar vários cartões que podem simbolizar diversos tipos de
         tarefas do seu projeto
       </li>
       <li>
         Você também pode criar diversas colunas além das padrões(que são "A fazer", "Fazendo",
         "Feita")
       </li>
+      <li>
+        Este projeto foi desenvolvido com fins de estudo e prática de desenvolvimento web,
+        construção e estilização de interfaces, o código fonte pode ser encontrado
+        <a href="#" class="text-orange">
+          aqui
+        </a>
+        e o caso queira entrar em contato com o desenvolvedor, basta clicar
+        <a href="#" class="text-orange">
+          aqui
+        </a>
+      </li>
     </ul>
 
-    <h4 class="display-5 text-center">
-      Este projeto foi desenvolvido com fins de estudo e prática de desenvolvimento web, construção
-      e estilização de interfaces, o código fonte pode ser encontrado
-      <a href="#" class="text-orange">
-        aqui
-      </a>
-      e o caso queira entrar em contato com o desenvolvedor, basta clicar
-      <a href="#" class="text-orange">
-        aqui
-      </a>
-    </h4>
+    <h4 class="display-5 text-center"></h4>
   </div>
 </template>
 

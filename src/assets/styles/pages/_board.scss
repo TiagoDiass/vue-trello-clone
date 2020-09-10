@@ -1,53 +1,84 @@
 .board-view {
-    border: 1px solid red;
 
-    .boards {
+    main {
+        margin-top: 1rem;
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
-        color: $dark-blue2;
 
         .board {
-            background-color: $light-gray;
-            width: 20%;
-            padding: 0 5px;
-            min-width: 230px;
-            max-width: 300px;
+            background-color: $dark-gray;
+            color: $dark-blue1;
+            border-radius: 8px;
+            box-shadow: 0 0 7px rgba($color: #000000, $alpha: 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            padding: 1rem 0.5rem;
 
             .board-title {
-                text-align: center;
-                font-weight: 400;
-                text-transform: uppercase;
-                font-size: 1rem;
-                margin-top: 0.8rem;
-                margin-bottom: 0.5rem;
+                align-self: flex-start;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            .drag-container {
+                width: 100%;
+            }
+
+            .task-ghost {
+                transition: transform 0.18s ease;
+                transform: rotateZ(5deg)
+            }
+
+            .task-ghost-drop {
+                transition: transform 0.18s ease-in-out;
+                transform: rotateZ(0deg)
             }
 
             .task {
                 display: flex;
-                padding: 14px 4px;
-                border-radius: 10px;
-                border: 1.2px solid $dark-gray;
-
                 width: 100%;
-                margin-bottom: 0.75rem;
+                background-color: $light-gray;
+                box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.25);
+                border-radius: 6px;
 
-                :last-of-type {
-                    margin-bottom: 0;
+                padding: 0.7rem;
+                margin-bottom: 0.6rem;
+
+                transition: background 0.1s;
+
+                &:hover {
+                    background-color: $light-gray2;
+                    cursor: pointer;
                 }
 
                 .column-drag-handle {
                     margin-right: 6px;
                     cursor: move;
                 }
+
+                h3 {
+                    font-weight: 300;
+                }
+            }
+
+            .drop-placeholder {
+                background-color: rgba($color: $very-dark-gray, $alpha: 0.4);
+                padding: 0.7rem;
+                border-radius: 6px;
+                margin-bottom: 0.6rem;
+                box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.25);
+            }
+
+
+            .empty-board-text {
+                width: 100%;
+                color: $light-gray;
+                font-size: 1.15rem;
+                letter-spacing: 1px;
             }
         }
-    }
-
-    .drop-placeholder {
-        margin-bottom: 0.75rem;
-        border-radius: 10px;
-        width: 100%;
-        margin: 0 auto;
-        background-color: $very-dark-gray;
     }
 }
