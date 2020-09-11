@@ -9,7 +9,7 @@
     <ul class="tips">
       <li>
         Vá para o
-        <span class="text-orange cursor-pointer" @click="navigateTo('Boards')">"Seu Quadro"</span>
+        <span class="text-orange cursor-pointer" @click="navigateTo('Board')">"Seu Quadro"</span>
         para visualizá-lo e começar a gerenciar suas tarefas
       </li>
       <li>
