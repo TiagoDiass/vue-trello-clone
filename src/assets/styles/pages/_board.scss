@@ -19,8 +19,37 @@
 
             .board-title {
                 align-self: flex-start;
-                font-weight: 500;
                 margin-bottom: 1rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                h3 {
+                    font-weight: 500;
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    padding: 3px 6px;
+                    transition: background 0.1s, display 0.1s;
+                    background-color: $very-dark-gray;
+                    color: $light-gray2;
+                    font-size: 0.8rem;
+                    border-radius: 4px;
+
+                    i {
+                        transition: transform 0.5s;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &:hover i {
+                        transform: rotate(360deg);
+                    }
+                }
             }
 
             .drag-container {

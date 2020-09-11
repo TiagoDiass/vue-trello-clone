@@ -5,7 +5,15 @@
     <main>
       <!-- Código com v-for pra facilitar -->
       <div class="board" v-for="(board, index) in boards" :key="index">
-        <h3 class="board-title">{{ board.title }}</h3>
+        <div class="board-title">
+          <h3>
+            {{ board.title }}
+          </h3>
+
+          <button @click="addTask(board.name)">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
 
         <Container
           group-name="trello"
@@ -188,13 +196,34 @@ export default {
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
           confirmButtonText: 'Sim',
-          cancelButtonText: 'Não, eu mudei de ideia',
+          cancelButtonText: 'Não',
+          reverseButtons: true,
         })
         .then(result => {
           if (result.isConfirmed) {
             this.boards[boardName].tasks.splice(taskIndex, 1);
           }
         });
+    },
+
+    async addTask(boardName) {
+      const { value: taskText } = await this.$swal.fire({
+        title: 'Digite o texto da tarefa',
+        input: 'text',
+        showCancelButton: true,
+        reverseButtons: true,
+        confirmButtonText: 'Pronto',
+        cancelButtonText: 'Cancelar',
+        inputValidator: value => {
+          if (!value) {
+            return 'Você precisa digitar algo';
+          }
+        },
+      });
+
+      if (taskText) {
+        this.boards[boardName].tasks.push({ text: taskText });
+      }
     },
   },
 };
