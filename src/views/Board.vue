@@ -20,6 +20,9 @@
           <Draggable v-for="(task, index) in board.tasks" :key="index">
             <div class="task">
               <h3>{{ task.text }}</h3>
+              <button @click="deleteTask(board.name, index)">
+                <i class="fas fa-trash"></i>
+              </button>
             </div>
           </Draggable>
         </Container>
@@ -174,6 +177,24 @@ export default {
       return {
         index,
       };
+    },
+
+    deleteTask(boardName, taskIndex) {
+      this.$swal
+        .fire({
+          title: 'Tem certeza?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sim',
+          cancelButtonText: 'Não, eu mudei de ideia',
+        })
+        .then(result => {
+          if (result.isConfirmed) {
+            this.boards[boardName].tasks.splice(taskIndex, 1);
+          }
+        });
     },
   },
 };
