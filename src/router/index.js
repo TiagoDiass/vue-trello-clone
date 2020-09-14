@@ -1,19 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Board from '../views/Board.vue';
 
 Vue.use(VueRouter);
 
 const routes = [{
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Board',
+    component: Board,
   },
   {
-    path: '/board',
-    name: 'Board',
-    props: true,
-    component: () => import('../views/Board.vue'),
+    path: '/home',
+    name: 'Home',
+    component: () => import('../views/Home.vue'),
   },
 ];
 

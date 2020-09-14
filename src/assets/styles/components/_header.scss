@@ -27,13 +27,14 @@ header.header {
             outline: none;
             padding: 6px 12px;
             border-radius: 6px;
+            margin-right: 1rem;
 
             i {
                 margin-left: 4px;
             }
 
-            &:first-of-type {
-                margin-right: 16px;
+            &:last-of-type {
+                margin-right: 0;
             }
 
             &:hover {

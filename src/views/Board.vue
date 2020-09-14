@@ -102,6 +102,7 @@
 
 <script>
 import { Container, Draggable } from 'vue-smooth-dnd';
+import exampleTasks from '../utils/exampleTasks';
 
 export default {
   components: {
@@ -109,43 +110,19 @@ export default {
     Draggable,
   },
 
+  beforeMount() {
+    let dataFromStorage = localStorage.getItem('boards');
+
+    if (!dataFromStorage) {
+      this.boards = exampleTasks;
+      localStorage.setItem('boards', JSON.stringify(this.boards));
+    } else {
+      this.boards = JSON.parse(dataFromStorage);
+    }
+  },
+
   data: () => ({
-    boards: {
-      todo: {
-        name: 'todo',
-        title: 'A fazer',
-        tasks: [
-          {
-            text: 'Fazer café',
-          },
-          {
-            text: 'Mexer no facebook',
-          },
-        ],
-      },
-
-      doing: {
-        name: 'doing',
-        title: 'Fazendo',
-        tasks: [
-          {
-            text: 'Fazer bolo',
-          },
-          {
-            text: 'Ir no shopping',
-          },
-          {
-            text: 'Lição de casa',
-          },
-        ],
-      },
-
-      done: {
-        name: 'done',
-        title: 'Feito',
-        tasks: [],
-      },
-    },
+    boards: {},
 
     draggingTask: {
       lane: '',
@@ -179,6 +156,8 @@ export default {
       if (addedIndex !== null) {
         this.boards[lane].tasks.splice(addedIndex, 0, this.draggingTask.taskData);
       }
+
+      this.saveBoardsOnStorage();
     },
 
     getChildPayload(index) {
@@ -202,6 +181,7 @@ export default {
         .then(result => {
           if (result.isConfirmed) {
             this.boards[boardName].tasks.splice(taskIndex, 1);
+            this.saveBoardsOnStorage();
           }
         });
     },
@@ -223,7 +203,12 @@ export default {
 
       if (taskText) {
         this.boards[boardName].tasks.push({ text: taskText });
+        this.saveBoardsOnStorage();
       }
+    },
+
+    saveBoardsOnStorage() {
+      localStorage.setItem('boards', JSON.stringify(this.boards));
     },
   },
 };
