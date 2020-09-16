@@ -15,7 +15,7 @@
         Seu Quadro
       </router-link>
 
-      <a href="#">
+      <a href="https://github.com/TiagoDiass/vue-trello-clone" target="_blank">
         <i class="fas fa-code"></i>
         Código Fonte
       </a>

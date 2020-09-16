@@ -23,11 +23,11 @@
       <li>
         Este projeto foi desenvolvido com fins de estudo e prática de desenvolvimento web,
         construção e estilização de interfaces, o código fonte pode ser encontrado
-        <a href="#" class="text-orange">
-          aqui
-        </a>
-        e o caso queira entrar em contato com o desenvolvedor, basta clicar
-        <a href="#" class="text-orange">
+        <a
+          href="https://github.com/TiagoDiass/vue-trello-clone"
+          class="text-orange"
+          target="_blank"
+        >
           aqui
         </a>
       </li>
