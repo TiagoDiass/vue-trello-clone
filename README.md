@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  A Web Application that users can create and manage their tasks, designed to be similar to the famous <a href="https://trello.com">Trello</a> application
+  A Web Application where users can create and manage their tasks, designed to be similar to the famous <a href="https://trello.com">Trello</a> application
 </h4>
 
 <p align="center">
