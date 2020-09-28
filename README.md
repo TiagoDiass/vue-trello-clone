@@ -29,10 +29,10 @@
   :rocket: Used Technologies
 </h2>
 
-#### Front-end techs:
-- [Vue.js](https://br.vuejs.org) to build all the front-end in general
+- [Vue.js](https://br.vuejs.org) to build all the app in general
 - [Sweet Alert](https://sweetalert.js.org/) to give the user friendlier alerts
 - [Vue Smooth Dnd](https://kutlugsahin.github.io/vue-smooth-dnd/#/cards) to build the drag and drop feature
+- [Sass](https://sass-lang.com/) to style the app
 
 
 
