@@ -20,7 +20,7 @@
 
 <p align="center">
   <img width="750" src="screenshots/1.png" /> <br>
-  <a href="https://easy-hospital.netlify.app" target="_blank">
+  <a href="https://vue-trello-clone20.netlify.app/" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
   </a>
 </p>
@@ -46,7 +46,7 @@ The aim of this project was practicing Vue.js and also learning how drag and dro
   :clipboard: Final Result
 </h2>
 
-### [You can check the app running clicking here](https://youtu.be/PJwd2briE4c)
+### [You can check the app running clicking here](https://vue-trello-clone20.netlify.app/)
 
 <h2 id="how-to-use" name="how-to-use">
   :information_source: How to Run
