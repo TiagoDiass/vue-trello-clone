@@ -170,6 +170,7 @@ export default {
       this.$swal
         .fire({
           title: 'Tem certeza?',
+          text: 'Após deletar uma tarefa você não poderá recuperá-la',
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
