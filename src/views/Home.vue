@@ -16,10 +16,10 @@
         No seus quadro, você pode criar vários cartões que podem simbolizar diversos tipos de
         tarefas do seu projeto
       </li>
-      <li>
+      <!-- <li>
         Você também pode criar diversas colunas além das padrões(que são "A fazer", "Fazendo",
         "Feita")
-      </li>
+      </li> -->
       <li>
         Este projeto foi desenvolvido com fins de estudo e prática de desenvolvimento web,
         construção e estilização de interfaces, o código fonte pode ser encontrado
