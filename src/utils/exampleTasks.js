@@ -28,7 +28,7 @@ export default {
   blocked: {
     name: 'blocked',
     title: 'Blocked',
-    tasks: []
+    tasks: [],
   },
 
   done: {
