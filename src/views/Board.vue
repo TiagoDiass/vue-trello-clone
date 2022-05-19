@@ -108,14 +108,14 @@ export default {
     deleteTask(boardName, taskIndex) {
       this.$swal
         .fire({
-          title: 'Tem certeza?',
-          text: 'Após deletar uma tarefa você não poderá recuperá-la',
+          title: 'Are you sure?',
+          text: "After deleting a task, you can't restore it",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: 'Sim',
-          cancelButtonText: 'Não',
+          confirmButtonText: "Yes, I'm sure",
+          cancelButtonText: 'No',
           reverseButtons: true,
         })
         .then(result => {
@@ -128,15 +128,16 @@ export default {
 
     async addTask(boardName) {
       const { value: taskText } = await this.$swal.fire({
-        title: 'Digite o texto da tarefa',
+        title: 'What is the task name?',
         input: 'text',
+        inputPlaceholder: 'Task name',
         showCancelButton: true,
         reverseButtons: true,
-        confirmButtonText: 'Pronto',
-        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Add task',
+        cancelButtonText: 'Cancel',
         inputValidator: value => {
           if (!value) {
-            return 'Você precisa digitar algo';
+            return 'You must give a name to the task';
           }
         },
       });

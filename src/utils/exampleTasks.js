@@ -1,7 +1,7 @@
 export default {
   todo: {
     name: 'todo',
-    title: 'To do',
+    title: 'To do ✏️',
     tasks: [
       {
         text: 'Example task 1',
@@ -14,26 +14,23 @@ export default {
 
   doing: {
     name: 'doing',
-    title: 'Doing',
+    title: 'Doing 🔨',
     tasks: [
       {
         text: 'Example task 3',
-      },
-      {
-        text: 'Example task 4',
       },
     ],
   },
 
   blocked: {
     name: 'blocked',
-    title: 'Blocked',
+    title: 'Blocked 🔒',
     tasks: [],
   },
 
   done: {
     name: 'done',
-    title: 'Done',
+    title: 'Done ✅',
     tasks: [],
   },
 };

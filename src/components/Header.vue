@@ -12,12 +12,12 @@
 
       <router-link tag="a" to="/">
         <i class="fas fa-clipboard-list"></i>
-        Seu Quadro
+        Your board
       </router-link>
 
       <a href="https://github.com/TiagoDiass/vue-trello-clone" target="_blank">
         <i class="fas fa-code"></i>
-        Código Fonte
+        Source code
       </a>
     </nav>
   </header>
