@@ -1,6 +1,6 @@
 <template>
   <div class="board-view view">
-    <h1 class="display-3 text-uppercase text-center">Seu Quadro</h1>
+    <h1 class="display-3 text-uppercase text-center">Your Board</h1>
 
     <main>
       <!-- Código com v-for pra facilitar -->
@@ -35,67 +35,6 @@
           </Draggable>
         </Container>
       </div>
-
-      <!-- Código manual pra cada lane -->
-      <!-- <div class="board">
-        <h3 class="board-title">A fazer</h3>
-        <Container
-          group-name="trello"
-          class="drag-container"
-          @drag-start="handleDragStart('todo', $event)"
-          @drop="handleDrop('todo', $event)"
-          :get-child-payload="getChildPayload"
-          :drop-placeholder="{ className: 'drop-placeholder' }"
-          drag-class="task-ghost"
-          drop-class="task-ghost-drop"
-        >
-          <Draggable v-for="(task, index) in tasks.todo" :key="index">
-            <div class="task">
-              <h3>{{ task.text }}</h3>
-            </div>
-          </Draggable>
-        </Container>
-      </div>
-
-      <div class="board">
-        <h3 class="board-title">Fazendo</h3>
-        <Container
-          group-name="trello"
-          class="drag-container"
-          @drag-start="handleDragStart('doing', $event)"
-          @drop="handleDrop('doing', $event)"
-          :get-child-payload="getChildPayload"
-          :drop-placeholder="{ className: 'drop-placeholder' }"
-          drag-class="task-ghost"
-          drop-class="task-ghost-drop"
-        >
-          <Draggable v-for="(task, index) in tasks.doing" :key="index">
-            <div class="task">
-              <h3>{{ task.text }}</h3>
-            </div>
-          </Draggable>
-        </Container>
-      </div>
-
-      <div class="board">
-        <h3 class="board-title">Feito</h3>
-        <Container
-          group-name="trello"
-          class="drag-container"
-          @drag-start="handleDragStart('done', $event)"
-          @drop="handleDrop('done', $event)"
-          :get-child-payload="getChildPayload"
-          :drop-placeholder="{ className: 'drop-placeholder' }"
-          drag-class="task-ghost"
-          drop-class="task-ghost-drop"
-        >
-          <Draggable v-for="(task, index) in tasks.done" :key="index">
-            <div class="task">
-              <h3>{{ task.text }}</h3>
-            </div>
-          </Draggable>
-        </Container>
-      </div> -->
     </main>
   </div>
 </template>

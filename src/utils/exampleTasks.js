@@ -1,33 +1,39 @@
 export default {
   todo: {
     name: 'todo',
-    title: 'A fazer',
+    title: 'To do',
     tasks: [
       {
-        text: 'Tarefa exemplo 1',
+        text: 'Example task 1',
       },
       {
-        text: 'Tarefa exemplo 2',
+        text: 'Example task 2',
       },
     ],
   },
 
   doing: {
     name: 'doing',
-    title: 'Fazendo',
+    title: 'Doing',
     tasks: [
       {
-        text: 'Tarefa exemplo 3',
+        text: 'Example task 3',
       },
       {
-        text: 'Tarefa exemplo 4',
+        text: 'Example task 4',
       },
     ],
   },
 
+  blocked: {
+    name: 'blocked',
+    title: 'Blocked',
+    tasks: []
+  },
+
   done: {
     name: 'done',
-    title: 'Feito',
+    title: 'Done',
     tasks: [],
   },
 };
